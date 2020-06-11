@@ -73,7 +73,8 @@
     width: 100%;
     box-shadow: 0px -4px 30px 0;
     background: url(../images/footer/bg_form.png) no-repeat bottom center, #ffffff;
-    // background-size: 100%;
+
+    
 
     &--title {
         display: flex;
@@ -97,7 +98,7 @@
             line-height: 0.5;
             margin-bottom: 60px;
 
-            @media (max-width: $mobile) {
+            @media (max-width: $mobile-portrait) {
                 font-size: 25px;
             }
         }

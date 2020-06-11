@@ -1012,7 +1012,7 @@ header {
   margin-bottom: 60px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .form__block--title .title {
     font-size: 25px;
   }
