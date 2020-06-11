@@ -9,13 +9,27 @@ $('document').ready(function () {
         slidesToScroll: 1,
         speed: 4000,
         easing: 'ease',
-        autoplay: true
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ],
+
     })
 })
 
 let map, coords, styles, marker
 
-coords = { lat: 49.397, lng: 34.644 }
+coords = { lat: 40.6751, lng: -73.9056 }
 
 styles = [
     {
@@ -47,18 +61,6 @@ styles = [
         "stylers": [
             {
                 "color": "#f5f5f5"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#9fa497"
-            },
-            {
-                "weight": 0.5
             }
         ]
     },
@@ -190,19 +192,17 @@ styles = [
     }
 ]
 
-content = 'We`re here'
-
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: coords,
-        zoom: 12,
+        zoom: 13,
         styles
     })
 
     marker = new google.maps.Marker({
         position: coords,
         map,
-        icon: 'images/marker.png'
+        icon: 'images/footer/mark.svg'
     })
 
 }

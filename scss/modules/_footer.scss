@@ -1,0 +1,197 @@
+.footer {
+    width: 100%;
+    height: 524px;
+    background: url(../images/footer/bg_footer.png) no-repeat top center,
+    linear-gradient(90deg, rgba(85,183,255,1)  0%,  rgba(126,90,255, 1) 100%);
+    background-size: 100% 100%;
+    font-family: 'GothamBook';
+}
+
+.link {
+    position: relative;
+    margin-top: 204px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 42px;
+
+    @media (max-width: 1200px) {
+        margin-top: 340px;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+    }
+
+    &__social {
+        display: flex;
+
+        @media (max-width: 1200px) {
+            margin-top: 10px;
+        }
+
+        .social {
+            margin-left: 20px;
+            height: 40px;
+            width: 40px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            @include f-center;
+            opacity: 0.5;
+            transition: .3s;
+        }
+
+        .social:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
+
+.copyrights {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.57;
+}
+
+.author {
+    border-left: 1px solid #ffffff;
+    padding-left: 20px;
+    margin: 0;
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.form__block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -300px;
+    min-height: 450px;
+    width: 100%;
+    box-shadow: 0px -4px 30px 0;
+    background: url(../images/footer/bg_form.png) no-repeat bottom center, #ffffff;
+    // background-size: 100%;
+
+    &--title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 60px;
+
+        .line {
+            width: 100px;
+            height: 1px;
+            background: #2c4058;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 44px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #2c4058;
+            line-height: 0.5;
+            margin-bottom: 60px;
+
+            @media (max-width: $mobile) {
+                font-size: 25px;
+            }
+        }
+    }
+
+    &--form {
+        margin: 0 60px;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            margin: 0 20px;
+        }
+
+        .form__contact {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            @media (max-width: 1200px) {
+                align-items: center;
+            }
+
+            .contact {
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                line-height: 1.89;
+                color: #2c4058;
+                margin-bottom: 25px;
+
+                svg {
+                    margin-right: 10px;
+                    width: 15px;
+                    height: 15px;
+                }
+
+                @media (max-width: $mobile-portrait) {
+                    display: block;
+                    text-align: center;
+                    font-size: 14px;
+                    align-items: center;
+                }
+            }
+        }
+
+        .form__inputs {
+            width: 100%;
+
+            
+            .input {
+                font-size: 18px;
+                line-height: 1.22;
+                width: 100%;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #2c4058;
+                opacity: .5;
+                transition: .3s;
+                
+            }
+
+            .input:focus {
+                opacity: 1;
+            }
+
+            .input-name {
+                margin-bottom: 40px;
+            }
+
+            .input-email {
+                margin-bottom: 30px;
+            }
+
+            .input-botton {
+                text-align: right;
+
+                @media (max-width: 1200px) {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .submit {
+                width: 140px;
+                height: 50px;
+                border: 1px solid #2c4058;
+                background: none;
+                font-size: 14px;
+                line-height: 1.57;
+                text-transform: uppercase;
+                color: #2c4058;
+                }
+            }
+        } 
+    }
+}
+

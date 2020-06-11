@@ -12,6 +12,11 @@
 	<link rel="icon" href="images/favicon.png">
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/fonts/gothambold/font.css">
+	<link rel="stylesheet" href="css/fonts/GothamBook/font.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+		rel="stylesheet">
 
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,10 +32,18 @@
 					<img src="images/header/Logo.png" alt="logo">
 				</a>
 				<ul class="navigation__menu">
-					<li class="menu__item"><a href="#" class="menu__link">About us</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Progects</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">News</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+					<li class="menu__item">
+						<div class="menu__active activeTrue"></div><a href="#" class="menu__link">About us</a>
+					</li>
+					<li class="menu__item">
+						<div class="menu__active"></div><a href="#project" class="menu__link">Progects</a>
+					</li>
+					<li class="menu__item">
+						<div class="menu__active"></div><a href="#news" class="menu__link">News</a>
+					</li>
+					<li class="menu__item">
+						<div class="menu__active"></div><a href="#contact" class="menu__link">Contact</a>
+					</li>
 				</ul>
 				<div class="navigation__social">
 					<a href="#" class="social__img">
@@ -48,8 +61,8 @@
 				<h1 class="description__title">Simple & mordern</h1>
 				<p class=" description__text">We make the world's beautiful every day</p>
 			</div>
-			<div class="scroll" href="">
-				<a href="#" class="scroll__img">
+			<div class="scroll">
+				<a href="#project" class="scroll__img">
 					<img src="images/header/scroll.png" alt="scroll">
 				</a>
 			</div>
@@ -57,139 +70,275 @@
 	</header>
 
 	<main>
-		<section class="project">
+		<section class="project" id="project">
 			<div class="container">
 				<div class="projects">
 					<div class="projects__title">
-						<h2>what we do</h2>
+						<hr class="line">
+						<h2 class="title">what we do</h2>
 					</div>
-					<div class="projects__project-1">
-						<div class="row">
-							<div class="col-6 col-md-7">
-								<img src="images/project/one world.png" alt="">
-							</div>
-							<div class="col-6 col-md-5 information">
-								<h2 class="information__title-1">One World</h2>
-								<h3 class="information__title-2">Trade Center</h3>
-								<p class="information__text">Increasing prosperity in our lives can be accomplished by
-									having the right frame of
-									mind. The truth is, our thoughts are very powerful.</p>
-								<input type="button" value="More Details" class="information__button">
-								<p class="information__location">New York City, United States - 1776 feet</p>
+					<div class="row projects__project-1">
+
+						<div class="col-12 col-md-7">
+							<img class="image-on" src="images/project/one world.png" alt="one_world">
+						</div>
+						<div class="col-12 col-md-5 information">
+							<h2 class="information__title-1">One World</h2>
+							<h3 class="information__title-2">Trade Center</h3>
+							<p class="information__text">Increasing prosperity in our lives can be accomplished by
+								having the right frame of
+								mind. The truth is, our thoughts are very powerful.</p>
+							<input type="button" value="More Details" class="information__button">
+							<div class="information__location">
+								<svg>
+									<use xlink:href="images/project/met.svg#log-met"></use>
+								</svg>
+								<p>New York City, United States - 1776 feet</p>
 							</div>
 						</div>
+
 					</div>
-					<div class="projects__project-2">
-						<div class="row">
-							<div class="col-6 col-md-5 information">
-								<h2 class="information__title-1">International</h2>
-								<h3 class="information__title-2">Commerce Centre</h3>
-								<p class="information__text">Successful businesses have many things in common, today
-									we’ll look at the big ‘R’ of recognition and how a digital advertising network may
-									help.</p>
-								<input type="button" value="More Details" class="information__button">
-								<p class="information__location">Hong Kong - 1588 Feet</p>
+
+					<div class="row projects__project-2">
+
+						<div class="col-12 col-md-5 information">
+							<h2 class="information__title-1">International</h2>
+							<h3 class="information__title-2">Commerce Centre</h3>
+							<p class="information__text">Successful businesses have many things in common, today
+								we’ll look at the big ‘R’ of recognition and how a digital advertising network may
+								help.</p>
+							<input type="button" value="More Details" class="information__button">
+							<div class="information__location">
+								<svg>
+									<use xlink:href="images/project/met.svg#log-met"></use>
+								</svg>
+								<p>Hong Kong - 1588 Feet</p>
 							</div>
-							<div class="col-6 col-md-7">
-								<img src="images/project/international.png" alt="">
-							</div>
+						</div>
+						<div class="col-12 col-md-7">
+							<img class="image-on" src="images/project/international.png" alt="international">
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="news">
+		<section class="news" id="news">
 			<div class="container">
 				<div class="latestNews">
 					<h2 class="latestNews__title">latest news</h2>
 					<div class="row latestNews__blocks slider">
 						<div class="col-4 block">
-							<img src="images/news/news-1.png" alt="news-1">
 							<div class="block__info">
+								<img src="images/news/news-1.png" alt="news-1">
+								<img class="block__info--plus" src="images/news/plus.png" alt="plus">
 								<h3 class="block__info--title">See The Unmatched Beauty Of The Great.</h3>
 								<p class="block__info--text">Free directories: directories are perfect for customers
 									that
-									ar...
+									are...
 									searching for</p>
+								<div class="block__info--author">
+									<img src="images/news/Isaac Dunn.png" alt="Isaac_Dunn">
+									<div class="author">
+										<h3 class="author__name">Isaac Dunn</h3>
+										<span class="author__date">09 Feb 2017</span>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="col-4 block">
-							<img src="images/news/news-2.png" alt="news-2">
 							<div class="block__info">
-								<h3 class="block__info--title">Effective Advertising Pointers.</h3>
+								<img src="images/news/news-2.png" alt="news-2">
+								<h3 class="block__info--title">Effective Advertising Pointers..</h3>
 								<p class="block__info--text">Having a home based business is a wonderful asset to your
-									life...</p>
-
+									life...
+								</p>
+								<div class="block__info--author">
+									<img src="images/news/Dominic Freeman.png" alt="Dominic_Freeman">
+									<div class="author">
+										<h3 class="author__name">Dominic Freeman</h3>
+										<span class="author__date">24 Apr 2017</span>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="col-4 block">
-							<img src="images/news/news-3.png" alt="news-3">
 							<div class="block__info">
+								<img src="images/news/news-3.png" alt="news-3">
+								<h3 class="block__info--title">Hypnotize Yourself Into The Ghost.</h3>
+								<p class="block__info--text">There are many things that are important to catalog
+									design...
+								</p>
+								<div class="block__info--author">
+									<img src="images/news/Alice Ward.png" alt="Alice_Ward">
+									<div class="author">
+										<h3 class="author__name">Alice Ward</h3>
+										<span class="author__date">30 Dec 2017</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 block">
+							<div class="block__info">
+								<img src="images/news/news-1.png" alt="news-1">
+								<img class="block__info--plus" src="images/news/plus.png" alt="plus">
+								<h3 class="block__info--title">See The Unmatched Beauty Of The Great.</h3>
+								<p class="block__info--text">Free directories: directories are perfect for customers
+									that
+									are...
+									searching for</p>
+								<div class="block__info--author">
+									<img src="images/news/Isaac Dunn.png" alt="Isaac_Dunn">
+									<div class="author">
+										<h3 class="author__name">Isaac Dunn</h3>
+										<span class="author__date">09 Feb 2017</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 block">
+							<div class="block__info">
+								<img src="images/news/news-2.png" alt="news-2">
+								<h3 class="block__info--title">Effective Advertising Pointers..</h3>
+								<p class="block__info--text">Having a home based business is a wonderful asset to your
+									life...
+								</p>
+								<div class="block__info--author">
+									<img src="images/news/Dominic Freeman.png" alt="Dominic_Freeman">
+									<div class="author">
+										<h3 class="author__name">Dominic Freeman</h3>
+										<span class="author__date">24 Apr 2017</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 block">
+							<div class="block__info">
+								<img src="images/news/news-3.png" alt="news-3">
 								<h3 class="block__info--title">Hypnotize Yourself Into The Ghost.</h3>
 								<p class="block__info--text">There are many things that are important to catalog
 									design....
 								</p>
-							</div>
-						</div>
-						<div class="col-4 block">
-							<img src="images/news/news-1.png" alt="news-1">
-							<div class="block__info">
-								<h3 class="block__info--title">See The Unmatched Beauty Of The Great.</h3>
-								<p class="block__info--text">Free directories: directories are perfect for customers
-									that
-									ar...
-									searching for</p>
-							</div>
-						</div>
-						<div class="col-4 block">
-							<img src="images/news/news-2.png" alt="news-2">
-							<div class="block__info">
-								<h3 class="block__info--title">Effective Advertising Pointers.</h3>
-								<p class="block__info--text">Having a home based business is a wonderful asset to your
-									life...</p>
-
-							</div>
-						</div>
-						<div class="col-4 block">
-							<img src="images/news/news-3.png" alt="news-3">
-							<div class="block__info">
-								<h3 class="block__info--title">Hypnotize Yourself Into The Ghost.</h3>
-								<p class="block__info--text">There are many things that are important to catalog
-									design....
-								</p>
+								<div class="block__info--author">
+									<img src="images/news/Alice Ward.png" alt="Alice_Ward">
+									<div class="author">
+										<h3 class="author__name">Alice Ward</h3>
+										<span class="author__date">30 Dec 2017</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</section>
 
 		<section class="gallery">
 			<div class="container">
 				<div class="gallery__block">
-					<h2 class="gallery__block--title">gallery</h2>
-					<div class="row">
-						<div class="col-6 ">
-							<a href="#"><img src="images/gallery/big.png" alt="big"></a>
+					<div class="gallery__block--title">
+						<hr class="line">
+						<h2 class="title">gallery</h2>
+					</div>
+					<div class="row gallery__block--image">
+						<div class="col-12 col-md-6 image-left">
+							<img class="image-left__imageBig" src="images/gallery/big.png" alt="big">
+							<img class="image-left__imageBigOn" src="images/gallery/360.png" alt="360">
 						</div>
-						<div class="col-6">
-							<a href="#"><img src="images/gallery/small-2.png" alt="small-2"></a>
-							<a href="#"><img src="images/gallery/small-1.png" alt="small-1"></a>
-							<!-- <a href="#"><img src="images/gallery/small-4.png" alt="small-4"></a>
-							<a href="#"><img src="images/gallery/small-3.png" alt="small-3"></a> -->
+						<div class="col-6 col-md-3">
+							<img class="gallery__imageSmall gallery__imageSmall-1" src="images/gallery/small-2.png"
+								alt="small-2">
+							<img class="gallery__imageSmall gallery__imageSmall-2" src="images/gallery/small-4.png"
+								alt="small-4">
 						</div>
-
+						<div class="col-6 col-md-3">
+							<img class="gallery__imageSmall gallery__imageSmall-3" src="images/gallery/small-1.png"
+								alt="small-1">
+							<img class="gallery__imageSmall gallery__imageSmall-4" src="images/gallery/small-3.png"
+								alt="small-3">
+						</div>
+					</div>
+					<div class="gallery__block--button">
+						<input type="button" value="see more" class="button">
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<div class="map" id="map"></div>
 	</main>
 
-	<section class="map" id="map"></section>
-	<footer>
-
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="offset-2 col-8 offset-2">
+					<div class="footer__block">
+						<div class="link">
+							<a href="#" class="link__logo"><img src="images/footer/Logo.png" alt=""></a>
+							<div class="link__social">
+								<a href="#" class="social">
+									<img src="images/footer/social-facebook.png" alt="facebook">
+								</a>
+								<a href="#" class="social">
+									<img src="images/footer/social-twitter.png" alt="twitter">
+								</a>
+								<a href="#" class="social">
+									<img src="images/footer/social-instagram.png" alt="instagram">
+								</a>
+							</div>
+						</div>
+						<span class="copyrights">Copyrights &copy; 2017 Monticello Group<a href="#" class="author">Made
+								with
+								&#10084; by Ga
+								Huy</a></span>
+					</div>
+					<div class="form__block" id="contact">
+						<div class="form__block--title">
+							<hr class="line">
+							<h2 class="title">get in touch</h2>
+						</div>
+						<div class="form__block--form">
+							<div class="form__contact">
+								<div class="contact">
+									<svg>
+										<use xlink:href="images/footer/met.svg#log-met"></use>
+									</svg>
+									<span class="form__contact--address">91 Nolan Extensions
+										Suite 670</span>
+								</div>
+								<div class="contact">
+									<svg>
+										<use xlink:href="images/footer/tell.svg#log-tell"></use>
+									</svg>
+									<span class="form__contact--tell">+001 356-868-2454</span>
+								</div>
+								<div class="contact">
+									<svg>
+										<use xlink:href="images/footer/post.svg#log-post"></use>
+									</svg>
+									<span class="form__contact--email">gahuy93@gmail.com</span>
+								</div>
+								<div class="contact">
+									<svg>
+										<use xlink:href="images/footer/clock.svg#log-clock"></use>
+									</svg>
+									<span class="form__contact--time">From 07:05AM to 19:30PM</span>
+								</div>
+							</div>
+							<form class="form__inputs">
+								<input class="input input-name" type="text" placeholder="Name">
+								<input class="input input-email" type="text" placeholder="Email">
+								<div class="input-botton">
+									<input class="submit" type="submit" value="submit">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/main.js"></script>

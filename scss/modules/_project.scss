@@ -1,35 +1,54 @@
 .project {
-    // height: 1630px;
     width: 100%;
-    background: #ffffff;
+    font-family: 'GothamBook';
+    margin-bottom: 140px;
+    @media (max-width: $mobile) {
+        margin-bottom: 60px;
+    }
 }
 
 .projects {
 
     &__title {
-        margin: 100px 0;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        height: 74px;
-        font-size: 50px;
-        font-weight: bold;
-        text-transform: uppercase;
+        @include f-center;
+        flex-direction: column;
+
+        .line {
+            height: 1px;
+            width: 100px;
+            background: #2c4058;
+            margin-top: 99px;
+        }
+        .title {
+            padding-top: 40px;
+            margin-bottom: 170px;
+            color: #2c4058;
+            font-size: 44px;
+            line-height: 0.55;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'gothambold1';
+
+            @media (max-width: $mobile) {
+                margin-bottom: 100px;
+            }
+        }
     }
 
-    &__project-1,
-    &__project-2 {
-        margin-bottom: 140px;
-        height: 540px;
+    &__project-1 {
+        margin-bottom: 210px;
+        min-height: 470px;
         display: flex;
-        align-items: flex-end;
-        
-        img {
-            width: 100%;
-            height: 100%;
-        }
 
-        
+        @media (max-width: $mobile) {
+            margin-bottom: 30px;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__project-2 {
+        min-height: 470px;
+        display: flex;
     }
 
     .information {
@@ -37,39 +56,67 @@
         justify-content: center;
         flex-direction: column;
 
+        @media (max-width: $mobile) {
+            align-items: center;
+        }
+
         &__title-1 {
-            font-size: 25px;
+            font-size: 22px;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
 
         &__title-2 {
-            font-size: 40px;
+            font-family: 'gothambold1';
+            font-size: 44px;
             font-weight: bold;
             margin-bottom: 30px;
-            letter-spacing: 3px;
             text-transform: uppercase;
+
+            @media (max-width: $mobile) {
+                font-size: 30px;
+            }
         }
 
         &__text {
-            font-size: 20px;
-            line-height: 1.38;
+            font-size: 18px;
+            line-height: 1.67;
             margin-bottom: 37px;
+            color: #4b5562;
+            font-family: 'Open Sans', sans-serif;
         }
 
         &__button {
             width: 190px;
             height: 50px;
             background: #ffffff;
-            border: 1px solid #000;
+            border: 1px solid #2c4058;
             text-transform: uppercase;
             font-size: 14px;
             margin-bottom: 60px;
+
+            @media (max-width: $mobile) {
+                margin-bottom: 20px;
+            }
         }
 
         &__location {
-            font-size: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            line-height: 1.67;
             font-style: italic;
+            font-family: 'Open Sans', sans-serif;
+            color: #4b5562;
+
+            svg {
+                height: 16px;
+                width: 16px;
+            }
+
+            @media (max-width: $mobile) {
+                margin-bottom: 10px;
+            }
         }
     }
 }
